@@ -320,7 +320,10 @@
 
 <div class="reveal">
   <div class="slides">
-    <section data-background-image="/slide1-bg.jpg">
+    <section
+      data-background-image="/slide1-bg.jpg"
+      data-background-color="aquamarine"
+    >
       <div id="luminance">
         <!-- <h2>SEMPRE LE STESSE IDEE</h2>
         <h1>PROMOZIONALI?</h1>
