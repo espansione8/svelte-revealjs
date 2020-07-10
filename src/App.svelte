@@ -277,7 +277,7 @@ svg {
 	<section data-background-image="/slide1-bg.jpg">
 		<h2>SEMPRE LE STESSE IDEE</h2>
 		<h1>PROMOZIONALI?</h1>
-		<h3>Allora rendi la tua memorabile...</h3>
+		<h3>Allora rendi la tua memorabile..</h3>
 	</section>
 
 	<section data-background="https://i.giphy.com/90F8aUepslB84.gif">
