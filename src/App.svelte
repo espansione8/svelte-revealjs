@@ -316,6 +316,55 @@
       text-shadow: 0 0 8px #fff;
     }
   }
+  /* effetto slide 2 BIG YIKES */
+  #fumetto {
+    font-family: "Luckiest Guy", cursive;
+    margin: 0;
+    font-size: 3em;
+    padding: 0;
+    color: white;
+    text-shadow: 0 0.1em 20px rgba(0, 0, 0, 1),
+      0.05em -0.03em 0 rgba(0, 0, 0, 1), 0.05em 0.005em 0 rgba(0, 0, 0, 1),
+      0em 0.08em 0 rgba(0, 0, 0, 1), 0.05em 0.08em 0 rgba(0, 0, 0, 1),
+      0px -0.03em 0 rgba(0, 0, 0, 1), -0.03em -0.03em 0 rgba(0, 0, 0, 1),
+      -0.03em 0.08em 0 rgba(0, 0, 0, 1), -0.03em 0 0 rgba(0, 0, 0, 1);
+  }
+  #fumetto span {
+    transform: scale(0.9);
+    display: inline-block;
+  }
+  #fumetto span:nth-child(1) {
+    animation: bop 1s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards infinite
+      alternate;
+  }
+  #fumetto span:nth-child(2) {
+    animation: bopB 1s 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards
+      infinite alternate;
+  }
+  #fumetto span:nth-child(3) {
+    animation: bop 1s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards infinite
+      alternate;
+  }
+
+  @keyframes bop {
+    0% {
+      transform: scale(0.9);
+    }
+    50%,
+    100% {
+      transform: scale(1);
+    }
+  }
+
+  @keyframes bopB {
+    0% {
+      transform: scale(0.9);
+    }
+    80%,
+    100% {
+      transform: scale(1.5) rotateZ(-3deg);
+    }
+  }
 </style>
 
 <div class="reveal">
@@ -325,16 +374,20 @@
       data-background-color="#555555"
     >
       <div id="luminance">
-        <!-- <h2>SEMPRE LE STESSE IDEE</h2>
-        <h1>PROMOZIONALI?</h1>
-        <h3>Allora rendi la tua memorabile..</h3> -->
         <span id="slide1-row1">SEMPRE LE STESSE IDEE</span>
         <span id="slide1-row2">PROMOZIONALI?</span>
       </div>
     </section>
 
     <section data-background="https://i.giphy.com/90F8aUepslB84.gif">
-      <h1>...e STUPISCI il tuo pubblico!</h1>
+      <div id="fumetto">
+        <span>ALLORA</span>
+      </div>
+      <div id="fumetto">
+        <span></span>
+        <span>STUPISCI</span>
+        <span>il tuo pubblico!</span>
+      </div>
     </section>
 
     <section>
