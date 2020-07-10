@@ -362,7 +362,7 @@
     }
     80%,
     100% {
-      transform: scale(1.5) rotateZ(-3deg);
+      transform: scale(1.8) rotateZ(-3deg);
     }
   }
 </style>
