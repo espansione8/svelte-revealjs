@@ -379,7 +379,7 @@
       </div>
     </section>
 
-    <section data-background="https://i.giphy.com/90F8aUepslB84.gif">
+    <section data-background="/hero-shape.jpg">
       <div id="fumetto">
         <span>ALLORA</span>
       </div>
