@@ -14,20 +14,18 @@
       mouseWheel: true,
       hideAddressBar: true,
       transitionSpeed: "slow", // default/fast/slow
-      backgroundTransition: "convex", // none/fade/slide/convex/concave/zoom
+      backgroundTransition: "fade" // none/fade/slide/convex/concave/zoom
       //plugins: [  ]
     });
-    Reveal.on("slidetransitionend", (event) => {
+    Reveal.on("slidetransitionend", event => {
       event.indexh === 6 ? (active = true) : (active = false);
     });
-  });
+    ///////////// last item
+  }); // end onmount
 </script>
 
 <style>
   /* THEME override */
-  .reveal .slides section[data-vertical-align-bottom] {
-    top: 80vh !important;
-  }
 
   .reveal h1,
   .reveal h2,
@@ -38,37 +36,6 @@
     text-transform: none;
   }
 
-  /* .reveal .slides section .fragment.highlight-color1,
-.reveal .slides section .fragment.highlight-color2,
-.reveal .slides section .fragment.highlight-color3,
-.reveal .slides section .fragment.highlight-color4 {
-	opacity: 1;
-	visibility: visible;
-}
-.reveal .slides section .fragment.highlight-color1.visible {
-	background: linear-gradient(90deg, #1a2980 0%, #26d0ce 100%);
-	-webkit-background-clip: text;
-	background-clip: text;
-	-webkit-text-fill-color: transparent;
-}
-.reveal .slides section .fragment.highlight-color2.visible {
-	background-image: linear-gradient(0deg, #08aeea 0%, #2af598 100%);
-	-webkit-background-clip: text;
-	background-clip: text;
-	-webkit-text-fill-color: transparent;
-}
-.reveal .slides section .fragment.highlight-color3.visible {
-	background-image: linear-gradient(19deg, #21d4fd 0%, #b721ff 100%);
-	-webkit-background-clip: text;
-	background-clip: text;
-	-webkit-text-fill-color: transparent;
-}
-.reveal .slides section .fragment.highlight-color4.visible {
-	background-image: linear-gradient(90deg, #fee140 0%, #fa709a 100%);
-	-webkit-background-clip: text;
-	background-clip: text;
-	-webkit-text-fill-color: transparent;
-} */
   /*sfondo dinamico*/
   .reveal {
     background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
@@ -87,65 +54,6 @@
 
     100% {
       background-position: 0% 50%;
-    }
-  }
-
-  /* effetto landing page SPECIALI */
-  svg {
-    display: block;
-    font: 4em "Roboto";
-    width: 100%;
-    /* height: 20vh; */
-    margin: 0 auto;
-  }
-
-  .text-copy {
-    fill: none;
-    stroke: white;
-    stroke-dasharray: 6% 29%;
-    stroke-width: 5px;
-    stroke-dashoffset: 0%;
-    animation: stroke-offset 5.5s infinite linear;
-  }
-
-  .text-copy:nth-child(1) {
-    stroke: #4d163d;
-    animation-delay: -1;
-  }
-
-  .text-copy:nth-child(2) {
-    stroke: #840037;
-    animation-delay: -2s;
-  }
-
-  .text-copy:nth-child(3) {
-    stroke: #bd0034;
-    animation-delay: -3s;
-  }
-
-  .text-copy:nth-child(4) {
-    stroke: #bd0034;
-    animation-delay: -4s;
-  }
-
-  .text-copy:nth-child(5) {
-    stroke: #fdb731;
-    animation-delay: -5s;
-  }
-
-  .text-copy:nth-child(6) {
-    stroke: darkorange;
-    animation-delay: -6s;
-  }
-
-  .text-copy:nth-child(7) {
-    stroke: #ffffff;
-    animation-delay: -7s;
-  }
-
-  @keyframes stroke-offset {
-    100% {
-      stroke-dashoffset: -35%;
     }
   }
 
@@ -280,10 +188,13 @@
   }
 
   .text3D {
+    font-family: "Luckiest Guy", cursive;
+    letter-spacing: 0.05em;
     text-shadow: 0px 1px 0px #999, 0px 2px 0px #888, 0px 3px 0px #777,
       0px 4px 0px #666, 0px 5px 0px #555, 0px 6px 0px #666, 0px 7px 0px #777,
       0px 8px 7px #999;
   }
+
   /*Luminance Light*/
   #luminance {
     background: 50% 100% / 50% 50% no-repeat
@@ -362,7 +273,126 @@
     }
     80%,
     100% {
-      transform: scale(1.8) rotateZ(-3deg);
+      transform: scale(1.3) rotateZ(-3deg);
+    }
+  }
+  /* 3d tilt https://codepen.io/noahblon/pen/CsxfH */
+  .stage {
+    height: 300px;
+    width: 35%;
+    /* margin: auto;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0; */
+    perspective: 9999px;
+    transform-style: preserve-3d;
+  }
+  .layer {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    transform-style: preserve-3d;
+    animation: ಠ_ಠ 5s infinite alternate ease-in-out -7.5s;
+    animation-fill-mode: forwards;
+    transform: rotateY(40deg) rotateX(30deg) translateZ(0);
+  }
+  .layer:after {
+    font: "Pacifico", "Kaushan Script", Futura, "Roboto", "Trebuchet MS",
+      Helvetica, sans-serif;
+    font-size: 2.5em;
+    content: "            con\A LANDING PAGE\A      SPECIALI !";
+    white-space: pre;
+    text-align: center;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 50px;
+    color: #f5f5f5;
+    letter-spacing: -2px;
+    text-shadow: 4px 0 10px rgba(0, 0, 0, 0.13);
+  }
+  .layer:nth-child(1):after {
+    transform: translateZ(0px);
+  }
+  .layer:nth-child(2):after {
+    transform: translateZ(-1.5px);
+  }
+  .layer:nth-child(3):after {
+    transform: translateZ(-3px);
+  }
+  .layer:nth-child(4):after {
+    transform: translateZ(-4.5px);
+  }
+  .layer:nth-child(5):after {
+    transform: translateZ(-6px);
+  }
+  .layer:nth-child(6):after {
+    transform: translateZ(-7.5px);
+  }
+  .layer:nth-child(7):after {
+    transform: translateZ(-9px);
+  }
+  .layer:nth-child(8):after {
+    transform: translateZ(-10.5px);
+  }
+  .layer:nth-child(9):after {
+    transform: translateZ(-12px);
+  }
+  .layer:nth-child(10):after {
+    transform: translateZ(-13.5px);
+  }
+  .layer:nth-child(11):after {
+    transform: translateZ(-15px);
+  }
+  .layer:nth-child(12):after {
+    transform: translateZ(-16.5px);
+  }
+  .layer:nth-child(13):after {
+    transform: translateZ(-18px);
+  }
+  .layer:nth-child(14):after {
+    transform: translateZ(-19.5px);
+  }
+  .layer:nth-child(15):after {
+    transform: translateZ(-21px);
+  }
+  .layer:nth-child(16):after {
+    transform: translateZ(-22.5px);
+  }
+  .layer:nth-child(17):after {
+    transform: translateZ(-24px);
+  }
+  .layer:nth-child(18):after {
+    transform: translateZ(-25.5px);
+  }
+  .layer:nth-child(19):after {
+    transform: translateZ(-27px);
+  }
+  .layer:nth-child(20):after {
+    transform: translateZ(-28.5px);
+  }
+  .layer:nth-child(n + 10):after {
+    -webkit-text-stroke: 3px rgba(0, 0, 0, 0.25);
+  }
+  .layer:nth-child(n + 11):after {
+    -webkit-text-stroke: 15px #ff981a;
+    text-shadow: 6px 0 6px #b36200, 5px 5px 5px #804600, 0 6px 6px #e67e00;
+  }
+  .layer:nth-child(n + 12):after {
+    -webkit-text-stroke: 15px #804600;
+  }
+  .layer:last-child:after {
+    -webkit-text-stroke: 17px rgba(0, 0, 0, 0.1);
+  }
+  .layer:first-child:after {
+    color: #fff;
+    text-shadow: none;
+  }
+  @keyframes ಠ_ಠ {
+    100% {
+      transform: rotateY(-40deg) rotateX(-40deg);
     }
   }
 </style>
@@ -371,8 +401,7 @@
   <div class="slides">
     <section
       data-background-image="/slide1-bg.jpg"
-      data-background-color="#555555"
-    >
+      data-background-color="rgba(0, 0, 0, 0.8)">
       <div id="luminance">
         <span id="slide1-row1">SEMPRE LE STESSE IDEE</span>
         <span id="slide1-row2">PROMOZIONALI?</span>
@@ -381,20 +410,20 @@
 
     <section data-background="/hero-shape.jpg">
       <div id="fumetto">
-        <span>ALLORA</span>
+        <span>INZIA A</span>
       </div>
       <div id="fumetto">
-        <span></span>
-        <span>STUPISCI</span>
+        <span />
+        <span>STUPIRE 😎</span>
         <span>il tuo pubblico!</span>
       </div>
     </section>
 
     <section>
-      <h3 class="text3D">comunicando in modo</h3>
-      <h3 class="fragment fade-up text3D">INTERATTIVO</h3>
-      <h3 class="fragment fade-left text3D">INNOVATIVO</h3>
-      <h3 class="fragment fade-right text3D">DIVERTENTE</h3>
+      <h3 class="text3D">📣 comunicando in modo</h3>
+      <h3 class="fragment fade-up text3D">😁 INTERATTIVO</h3>
+      <h3 class="fragment fade-left text3D">INNOVATIVO 🤯</h3>
+      <h3 class="fragment fade-right text3D">🥳 DIVERTENTE</h3>
     </section>
 
     <section>
@@ -403,61 +432,70 @@
 			<span class="fragment highlight-color2">LANDING</span>
 			<span class="fragment highlight-color3">PAGE</span>
 		</h1> -->
-      <h1><span class="burn">con LANDING PAGE</span></h1>
-      <svg viewBox="0 0 900 150">
-        <symbol id="s-text">
-          <text text-anchor="middle" x="50%" y="80%">SPECIALI</text>
-        </symbol>
-
-        <g class="g-ants">
-          <use xlink:href="#s-text" class="text-copy"></use>
-          <use xlink:href="#s-text" class="text-copy"></use>
-          <use xlink:href="#s-text" class="text-copy"></use>
-          <use xlink:href="#s-text" class="text-copy"></use>
-          <use xlink:href="#s-text" class="text-copy"></use>
-          <use xlink:href="#s-text" class="text-copy"></use>
-          <use xlink:href="#s-text" class="text-copy"></use>
-        </g>
-      </svg>
+      <!-- <h1>
+        <span class="burn">con LANDING PAGE</span>
+        SPECIALI
+      </h1> -->
+      <div class="stage">
+        <div class="layer" />
+        <div class="layer" />
+        <div class="layer" />
+        <div class="layer" />
+        <div class="layer" />
+        <div class="layer" />
+        <div class="layer" />
+        <div class="layer" />
+        <div class="layer" />
+        <div class="layer" />
+        <div class="layer" />
+        <div class="layer" />
+        <div class="layer" />
+        <div class="layer" />
+        <div class="layer" />
+        <div class="layer" />
+        <div class="layer" />
+        <div class="layer" />
+        <div class="layer" />
+        <div class="layer" />
+      </div>
     </section>
 
     <section>
       <section>
-        <h1>attraverso CONCORSI</h1>
-        <h3>(spazio freccia giu)</h3>
+        <h1 class="text3D">attraverso CONCORSI</h1>
+        <span style="font-size: 3em">⏬</span>
       </section>
       <section
         data-background-iframe="gratta.html"
-        data-background-interactive
-      ></section>
+        data-background-interactive />
     </section>
 
     <section>
       <section>
-        <h2>e coinvolgenti ESPERIENZE 360°</h2>
-        <h3>(spazio freccia giu)</h3>
+        <h2 class="text3D">e coinvolgenti ESPERIENZE 360°</h2>
+        <span style="font-size: 3em">⏬</span>
       </section>
       <section
         data-background-iframe="https://espansione8.com/360"
-        data-background-interactive
-      ></section>
+        data-background-interactive />
     </section>
 
     <section data-state="creativo">
       <h3 class="text3D">Rivoluziona la tua promozione in modo</h3>
       <div class="word">
-        <span class="text3D" class:active="{active}">C</span>
-        <span class="text3D" class:active="{active}">R</span>
-        <span class="text3D" class:active="{active}">E</span>
-        <span class="text3D" class:active="{active}">A</span>
-        <span class="text3D" class:active="{active}">T</span>
-        <span class="text3D" class:active="{active}">I</span>
-        <span class="text3D" class:active="{active}">V</span>
-        <span class="text3D" class:active="{active}">O</span>
+        <span class="text3D" class:active>C</span>
+        <span class="text3D" class:active>R</span>
+        <span class="text3D" class:active>E</span>
+        <span class="text3D" class:active>A</span>
+        <span class="text3D" class:active>T</span>
+        <span class="text3D" class:active>I</span>
+        <span class="text3D" class:active>V</span>
+        <span class="text3D" class:active>O</span>
       </div>
     </section>
     <section>
-      <h2 class="text3D">e falla conoscere al mondo</h2>
+      <!-- <h2 class="text3D">e falla conoscere al mondo</h2> -->
+      <Spin />
     </section>
   </div>
 </div>
