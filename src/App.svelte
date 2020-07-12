@@ -495,7 +495,6 @@
     </section>
     <section>
       <!-- <h2 class="text3D">e falla conoscere al mondo</h2> -->
-      <Spin />
     </section>
   </div>
 </div>
