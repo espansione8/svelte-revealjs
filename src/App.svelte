@@ -16,7 +16,7 @@
       mouseWheel: true,
       hideAddressBar: true,
       transitionSpeed: "slow", // default/fast/slow
-      transition: "concave",
+      transition: "slide",
       backgroundTransition: "slide" // none/fade/slide/convex/concave/zoom
       //plugins: [  ]
     });
