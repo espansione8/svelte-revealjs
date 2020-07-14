@@ -60,7 +60,7 @@
     }
   }
 
-  /* animazione CREATIVO*/
+  /* animazione CREATIVO https://codepen.io/FlorinPop17/pen/WEBNyx*/
 
   .word span {
     cursor: pointer;
@@ -192,7 +192,7 @@
       0px 8px 7px #999;
   }
 
-  /*Luminance Light*/
+  /*Luminance Light https://codepen.io/onecastell/pen/VwZWBvr*/
   #luminance {
     background: 50% 100% / 50% 50% no-repeat
       radial-gradient(ellipse at bottom, #fff, transparent, transparent);
@@ -229,7 +229,7 @@
     }
   }
 
-  /* effetto slide 2 BIG YIKES */
+  /* effetto BIG YIKES https://codepen.io/kylewetton/pen/yLBwdJX*/
   #fumetto {
     font-family: "Luckiest Guy", cursive;
     margin: 0;
