@@ -285,160 +285,79 @@
     }
   }
 
-  /* 3d tilt https://codepen.io/noahblon/pen/CsxfH */
-  .stage {
-    height: 300px;
-    width: 35%;
-    /* margin: auto;
+  /*LANDING PAGE SPECIALI https://codepen.io/davidlillo/pen/wZRagx*/
+  #stage {
+    position: relative;
+    background-image: linear-gradient(
+      185deg,
+      #f89dff 0,
+      #ff96ff 3.33%,
+      #ff90f3 6.67%,
+      #ff8be3 10%,
+      #ff88d2 13.33%,
+      #ff86c1 16.67%,
+      #ff86b0 20%,
+      #ff87a0 23.33%,
+      #ff8b8f 26.67%,
+      #ff8f80 30%,
+      #ff9571 33.33%,
+      #ff9b64 36.67%,
+      #ffa157 40%,
+      #ffa84c 43.33%,
+      #ffaf43 46.67%,
+      #f2b53c 50%,
+      #e4bb38 53.33%,
+      #d4c038 56.67%,
+      #c4c53b 60%,
+      #b3ca42 63.33%,
+      #a1ce4c 66.67%,
+      #8ed257 70%,
+      #78d564 73.33%,
+      #5ed773 76.67%,
+      #3ad983 80%,
+      #00db93 83.33%,
+      #00dca4 86.67%,
+      #00ddb5 90%,
+      #00dec7 93.33%,
+      #00ded8 96.67%,
+      #00dee9 100%
+    );
+    background-size: 400% 400%;
+    animation: gradientBG 2s ease infinite;
+    background-clip: text;
+    text-fill-color: transparent;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-transform: Uppercase;
+    margin-bottom: 0.5em;
+    font-family: "Rubik", sans-serif;
+    font-size: 5rem;
+    font-weight: bold;
+  }
+
+  #stage:before,
+  #stage:after {
+    content: attr(data-text);
     position: absolute;
     top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0; */
-    perspective: 9999px;
-    transform-style: preserve-3d;
+    left: 0;
   }
 
-  .layer {
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    transform-style: preserve-3d;
-    animation: ಠ_ಠ 5s infinite alternate ease-in-out -7.5s;
-    animation-fill-mode: forwards;
-    transform: rotateY(40deg) rotateX(30deg) translateZ(0);
+  #stage:before {
+    z-index: -1;
+    text-shadow: -0.001em -0.001em 1px rgba(255, 255, 255, 0.15);
   }
 
-  .layer:after {
-    font: "Pacifico", "Kaushan Script", Futura, "Roboto", "Trebuchet MS",
-      Helvetica, sans-serif;
-    font-size: 2.5em;
-    content: "            con\A LANDING PAGE\A      SPECIALI !";
-    white-space: pre;
-    text-align: center;
-    height: 100%;
-    width: 100%;
-    position: absolute;
-    top: 50px;
-    color: #f5f5f5;
-    letter-spacing: -2px;
-    text-shadow: 4px 0 10px rgba(0, 0, 0, 0.13);
-  }
-
-  .layer:nth-child(1):after {
-    transform: translateZ(0px);
-  }
-
-  .layer:nth-child(2):after {
-    transform: translateZ(-1.5px);
-  }
-
-  .layer:nth-child(3):after {
-    transform: translateZ(-3px);
-  }
-
-  .layer:nth-child(4):after {
-    transform: translateZ(-4.5px);
-  }
-
-  .layer:nth-child(5):after {
-    transform: translateZ(-6px);
-  }
-
-  .layer:nth-child(6):after {
-    transform: translateZ(-7.5px);
-  }
-
-  .layer:nth-child(7):after {
-    transform: translateZ(-9px);
-  }
-
-  .layer:nth-child(8):after {
-    transform: translateZ(-10.5px);
-  }
-
-  .layer:nth-child(9):after {
-    transform: translateZ(-12px);
-  }
-
-  .layer:nth-child(10):after {
-    transform: translateZ(-13.5px);
-  }
-
-  .layer:nth-child(11):after {
-    transform: translateZ(-15px);
-  }
-
-  .layer:nth-child(12):after {
-    transform: translateZ(-16.5px);
-  }
-
-  .layer:nth-child(13):after {
-    transform: translateZ(-18px);
-  }
-
-  .layer:nth-child(14):after {
-    transform: translateZ(-19.5px);
-  }
-
-  .layer:nth-child(15):after {
-    transform: translateZ(-21px);
-  }
-
-  .layer:nth-child(16):after {
-    transform: translateZ(-22.5px);
-  }
-
-  .layer:nth-child(17):after {
-    transform: translateZ(-24px);
-  }
-
-  .layer:nth-child(18):after {
-    transform: translateZ(-25.5px);
-  }
-
-  .layer:nth-child(19):after {
-    transform: translateZ(-27px);
-  }
-
-  .layer:nth-child(20):after {
-    transform: translateZ(-28.5px);
-  }
-
-  .layer:nth-child(n + 10):after {
-    -webkit-text-stroke: 3px rgba(0, 0, 0, 0.25);
-  }
-
-  .layer:nth-child(n + 11):after {
-    -webkit-text-stroke: 15px #ff981a;
-    text-shadow: 6px 0 6px #b36200, 5px 5px 5px #804600, 0 6px 6px #e67e00;
-  }
-
-  .layer:nth-child(n + 12):after {
-    -webkit-text-stroke: 15px #804600;
-  }
-
-  .layer:last-child:after {
-    -webkit-text-stroke: 17px rgba(0, 0, 0, 0.1);
-  }
-
-  .layer:first-child:after {
-    color: #fff;
-    text-shadow: none;
-  }
-
-  @keyframes ಠ_ಠ {
-    100% {
-      transform: rotateY(-40deg) rotateX(-40deg);
-    }
+  #stage:after {
+    z-index: -2;
+    text-shadow: 10px 10px 10px rgba(0, 0, 0, 0.5),
+      20px 20px 20px rgba(0, 0, 0, 0.4), 30px 30px 30px rgba(0, 0, 0, 0.1);
+    mix-blend-mode: multiply;
   }
 
   /*world effect https://codepen.io/jjperezaguinaga/pen/yuBdq*/
   @import url(https://fonts.googleapis.com/css?family=Pathway+Gothic+One);
 
-  /* body {
-	 background: -webkit-radial-gradient(center, ellipse cover, #fff 0%, #f2efd9 100%);
-} */
   @keyframes rotate-right {
     from {
       -webkit-transform: rotate(0deg);
@@ -662,27 +581,8 @@
     </section>
 
     <section>
-      <div class="stage">
-        <div class="layer" />
-        <div class="layer" />
-        <div class="layer" />
-        <div class="layer" />
-        <div class="layer" />
-        <div class="layer" />
-        <div class="layer" />
-        <div class="layer" />
-        <div class="layer" />
-        <div class="layer" />
-        <div class="layer" />
-        <div class="layer" />
-        <div class="layer" />
-        <div class="layer" />
-        <div class="layer" />
-        <div class="layer" />
-        <div class="layer" />
-        <div class="layer" />
-        <div class="layer" />
-        <div class="layer" />
+      <div id="stage" data-text="CON LANDING PAGE SPECIALI">
+        CON LANDING PAGE SPECIALI
       </div>
     </section>
 
