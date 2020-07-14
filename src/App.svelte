@@ -289,9 +289,8 @@
   #stage {
     position: relative;
     background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
-    background-size: 400% 400%;
-    animation: gradientBG 10s ease infinite;
-    /* animation: gradientBG 2s ease infinite; */
+    /* background-size: 400% 400%;
+    animation: gradientBG 10s ease infinite; */
     background-clip: text;
     color: transparent;
     -webkit-background-clip: text;
