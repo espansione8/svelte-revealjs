@@ -323,9 +323,9 @@
       #00dee9 100%
     );
     background-size: 400% 400%;
-    animation: gradientBG 2s ease infinite;
+    /* animation: gradientBG 2s ease infinite; */
     background-clip: text;
-    text-fill-color: transparent;
+    color: transparent;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     text-transform: Uppercase;
