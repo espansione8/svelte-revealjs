@@ -288,41 +288,9 @@
   /*LANDING PAGE SPECIALI https://codepen.io/davidlillo/pen/wZRagx*/
   #stage {
     position: relative;
-    background-image: linear-gradient(
-      185deg,
-      #f89dff 0,
-      #ff96ff 3.33%,
-      #ff90f3 6.67%,
-      #ff8be3 10%,
-      #ff88d2 13.33%,
-      #ff86c1 16.67%,
-      #ff86b0 20%,
-      #ff87a0 23.33%,
-      #ff8b8f 26.67%,
-      #ff8f80 30%,
-      #ff9571 33.33%,
-      #ff9b64 36.67%,
-      #ffa157 40%,
-      #ffa84c 43.33%,
-      #ffaf43 46.67%,
-      #f2b53c 50%,
-      #e4bb38 53.33%,
-      #d4c038 56.67%,
-      #c4c53b 60%,
-      #b3ca42 63.33%,
-      #a1ce4c 66.67%,
-      #8ed257 70%,
-      #78d564 73.33%,
-      #5ed773 76.67%,
-      #3ad983 80%,
-      #00db93 83.33%,
-      #00dca4 86.67%,
-      #00ddb5 90%,
-      #00dec7 93.33%,
-      #00ded8 96.67%,
-      #00dee9 100%
-    );
+    background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
     background-size: 400% 400%;
+    animation: gradientBG 10s ease infinite;
     /* animation: gradientBG 2s ease infinite; */
     background-clip: text;
     color: transparent;
