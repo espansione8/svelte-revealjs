@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Lucky Scratch</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- CSS only -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.0/css/bulma.css">
+  <!-- JS, Popper.js, and jQuery -->
+  <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
+    crossorigin="anonymous"></script>
+  <style>
+    #cf2 {
+      margin: 0 auto;
+    }
+
+    #cf2 img {
+      width: 100%;
+    }
+
+    #cf2 img.transparent {
+      opacity: 0;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="columns" style="
+        background-image: url('./images/sfondo-landing-gratta.jpg');
+        background-size: cover;
+        min-height: 100vh;
+      ">
+    <div class="column" style="text-align: center; margin-top: 20px;">
+      <img src="./images/logo-gratta-vinci.png" alt="Lucky Scratch" style="
+            max-width: 500px;
+            width: 100%;
+            height: auto;
+          ">
+      <div class="columns">
+        <div class="column" style="margin-top: 20px;">
+          <button type="button" class="button is-warning cf_onclick"
+            style="background-color: #d81400; color: white"><img src="images/arrow_cropped.gif" alt="freccia" style="
+              max-width: 150px;
+              width: 100%;
+              height: auto;
+            "> CLICCA QUI PER GRATTARE</button>
+        </div>
+      </div>
+      <div class="columns">
+        <div class="column">
+          <div id="cf2" style="
+              background-image: url(./images/gratta_vinci.jpg);
+              background-size: cover;
+              max-width: 900px;
+              width: 100%;
+              height: auto;
+              border-radius: 20px;
+              ">
+            <img class="top" src="./images/gratta_vinci.jpg" style="border-radius: 20px; display: block;" />
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script type="text/javascript">
+    $(document).ready(function () {
+      $(".cf_onclick").click(function () {
+        function isEven(value) {
+          if (value % 2 == 0) {
+            return true;
+          } else {
+            return false;
+          }
+        }
+        // $("#cf2 img.top").toggleClass("transparent");
+        var numeroGenerato = Math.floor(Math.random() * 11);
+        $("#cf2 img.top")
+          .fadeOut(function () {
+            if (isEven(numeroGenerato)) {
+              $(".top").attr("src", "./images/gratta_vinci-vinto.jpg");
+            } else {
+              $(".top").attr("src", "./images/gratta_vinci-perso.jpg");
+            }
+          })
+          .fadeIn();
+      });
+    });
+  </script>
+</body>
+
+</html>
