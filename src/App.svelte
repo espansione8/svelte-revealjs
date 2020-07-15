@@ -30,8 +30,14 @@
 <style>
   /*image creditA*/
   /*
+  slide 2 bg
   https://www.freepik.com/free-vector/comic-superhero-standing-silhouette_761398.htm#page=1&query=hero&position=19
+  arrow
   https://giphy.com/channel/arxmaro
+  3d view
+  https://www.flickr.com/photos/sitoo/31657349524/
+  https://www.flickr.com/photos/nikonfdslr/37412854971/
+  https://www.flickr.com/photos/sitoo/41094817482/in/photostream/
   */
 
   /* THEME override */
@@ -571,7 +577,7 @@
         <h2 class="text3D">e coinvolgenti ESPERIENZE 360°</h2>
         <span on:click={arrowDown} style="font-size: 3em; cursor: pointer;">⏬</span>
       </section>
-      <section data-background-iframe="https://espansione8.com/360" data-background-interactive />
+      <section data-background-iframe="tour.html" data-background-interactive />
     </section>
 
     <section data-state="creativo">
