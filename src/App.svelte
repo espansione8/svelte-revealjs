@@ -569,7 +569,7 @@
     <section>
       <section>
         <h2 class="text3D">e coinvolgenti ESPERIENZE 360°</h2>
-        <span style="font-size: 3em">⏬</span>
+        <span on:click={arrowDown} style="font-size: 3em; cursor: pointer;">⏬</span>
       </section>
       <section data-background-iframe="https://espansione8.com/360" data-background-interactive />
     </section>
