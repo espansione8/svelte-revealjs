@@ -99,9 +99,9 @@ surge public my-project.surge.sh
 ```
 ### CSS & JS
 ```bash
-    https://codepen.io/FlorinPop17/pen/WEBNyx*/
-    https://codepen.io/onecastell/pen/VwZWBvr*/
-    https://codepen.io/kylewetton/pen/yLBwdJX*/
-    https://codepen.io/davidlillo/pen/wZRagx*/
-    https://codepen.io/jjperezaguinaga/pen/yuBdq*/
+    https://codepen.io/FlorinPop17/pen/WEBNyx
+    https://codepen.io/onecastell/pen/VwZWBvr
+    https://codepen.io/kylewetton/pen/yLBwdJX
+    https://codepen.io/davidlillo/pen/wZRagx
+    https://codepen.io/jjperezaguinaga/pen/yuBdq
 ```
