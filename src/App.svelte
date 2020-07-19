@@ -5,7 +5,6 @@
   // - https://revealjs.com/initialization/
   // - https://revealjs.com/config/
   import Reveal from "reveal.js";
-  //import Markdown from 'reveal.js/plugin/markdown/markdown.esm.js';
   let active = false;
   onMount(() => {
     console.log("the component has mounted");
@@ -23,12 +22,12 @@
       event.indexh === 6 ? (active = true) : (active = false);
     });
     ///////////// last item
-  }); // end onmount
+  }); // end onMount
   const arrowDown = () => Reveal.down();
 </script>
 
 <style>
-  /*image creditA*/
+  /*image credits*/
   /*
   slide 2 bg
   https://www.freepik.com/free-vector/comic-superhero-standing-silhouette_761398.htm#page=1&query=hero&position=19
@@ -38,6 +37,9 @@
   https://www.flickr.com/photos/sitoo/31657349524/
   https://www.flickr.com/photos/nikonfdslr/37412854971/
   https://www.flickr.com/photos/sitoo/41094817482/in/photostream/
+  icons
+  https://www.flaticon.com/free-icon/paper-plane_3163526?term=send%20email&page=1&position=21  photo3idea_studio
+  https://www.flaticon.com/authors/pixel-perfect
   */
 
   /* THEME override */
@@ -6856,5 +6858,29 @@
         </svg>
       </div>
     </section>
+
+    <section>
+      <h3 class="text3D">VUOI DIRCI QUALCOSA?</h3>
+      <a href="mailto:yourmail@email.com">
+        <img
+          class="icon"
+          src="images/mail.svg"
+          alt="mail icon"
+          width="150"
+          height="150" />
+      </a>
+      <p class="text3D">
+        questo sito è OPENSOURCE, visualizza il codice su GITHUB
+      </p>
+      <a href="https://github.com/espansione8/svelte-revealjs" target="_blank">
+        <img
+          class="icon"
+          src="images/github.svg"
+          alt="github icon"
+          width="150"
+          height="150" />
+      </a>
+    </section>
+
   </div>
 </div>

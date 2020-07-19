@@ -1,8 +1,4 @@
-*Looking for a shareable component template? Go here --> [sveltejs/component-template](https://github.com/sveltejs/component-template)*
-
----
-
-# svelte app
+# svelte app + revealjs
 
 This is a project template for [Svelte](https://svelte.dev) apps. It lives at https://github.com/sveltejs/template.
 
@@ -88,4 +84,24 @@ Then, from within your project folder:
 ```bash
 npm run build
 surge public my-project.surge.sh
+```
+## Credit & Sources 
+
+### Images & Icons
+```bash
+  https://www.freepik.com/free-vector/comic-superhero-standing-silhouette_761398.htm#page=1&query=hero&position=19
+  https://giphy.com/channel/arxmaro
+  https://www.flickr.com/photos/sitoo/31657349524/
+  https://www.flickr.com/photos/nikonfdslr/37412854971/
+  https://www.flickr.com/photos/sitoo/41094817482/in/photostream/
+  https://www.flaticon.com/free-icon/paper-plane_3163526?term=send%20email&page=1&position=21
+  https://www.flaticon.com/authors/pixel-perfect
+```
+### CSS & JS
+```bash
+    https://codepen.io/FlorinPop17/pen/WEBNyx*/
+    https://codepen.io/onecastell/pen/VwZWBvr*/
+    https://codepen.io/kylewetton/pen/yLBwdJX*/
+    https://codepen.io/davidlillo/pen/wZRagx*/
+    https://codepen.io/jjperezaguinaga/pen/yuBdq*/
 ```
